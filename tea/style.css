@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  width: 1040px;
+  margin: 0 auto;
+  padding-top: 64px;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  font-family: 'Mulish', sans-serif;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s, font-weight 0.3s;
+}
+
+nav ul li a:hover {
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 88px;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Фоновое изображение (журавли) */
+.text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 600px;
+  height: 150%;
+  background-image: url('./imgs/birds.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Заголовки */
+.text h1 {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: #000;
+  line-height: 150%;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.text h1 span {
+  font-weight: 700;
+  color: #651126;
+}
+
+/* Текст */
+.text p {
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 16px;
+  color: #780516d3;
+  margin-bottom: 48px;
+}
+
+/* Мудрость */
+.wisdom {
+  font-style: italic;
+  font-size: 14px;
+  color: #651126;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  opacity: 0.9;
+}
+
+/* Кнопка */
+.text button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 16px;
+  color: #F9F9F9;
+  background-color: #560404;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.text button:hover {
+  background-color: #780901;
+}
+
+/* Изображение справа */
+main img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: 400;
+  color: #000;
+  line-height: 150%;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ========== DECORATIVE ELEMENTS ========== */
+#balls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
